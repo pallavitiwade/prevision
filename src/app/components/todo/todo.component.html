@@ -1,0 +1,52 @@
+
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <form>
+                <div class="card">
+                    <h3 class="text-center mt-2">Todo</h3>
+                    <div class="card-body">
+                        <div class="form-group">
+                        <label for="title">
+                            title
+                        </label>
+                        <input type="text" #title class="form-control">
+                        </div>
+                        <div class="form-group">
+                        <label for="userId">UserId</label>
+                        <select type="text" #userId class="form-control">
+                            <option value="1">1</option>
+                            
+                          <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+
+                            
+
+                        </select>
+                        </div>
+                        <div class="footer">
+                            <button (click)="onAddTodo(title)" *ngIf="!isinEditMode" class="btn btn-block bg-primary">Add Todo</button>
+                            <button (click)="onUpdate()" *ngIf="isinEditMode" class="btn btn-block bg-primary">Update Todo</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-8">
+           <ul class="list-group">
+            <h4>Todo Item</h4>
+            <li *ngFor="let todo of todosarr" class="list-group-item d-flex justify-content-between">
+                <strong>{{todo.title}}</strong>
+           <div>
+        <button (click)="OnEdit(todo)" class="btn btn-sm bg-primary mr-3">Edit</button>
+     <button (click)=" onRemove(todo.id)" class="btn btn-sm bg-danger">Delete</button>
+</div>
+    </li>
+</ul>
+</div>
+</div>

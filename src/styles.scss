@@ -2,3 +2,26 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+$green:#39a935;
+$dark:#173b20;
+$light-green:#eef8e9;
+$text:#202520;
+$muted:#777;
+$border:#eeeeee;
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $text;
+  background: #fff;
+}
+
+.page-wrapper{
+  overflow: hidden;
+}

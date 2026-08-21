@@ -1,0 +1,69 @@
+
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            <div class="card">
+                <h3 class="text-center mt-2">Student Form</h3>
+                <form>
+                    <div class="card-body">
+                <div class="form-group">
+                    <label for="studentName">Student Name*</label>
+                    <input type="text" #studentName class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="text" #email class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Number*</label>
+                    <input type="text" #phoneNumber class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="course">Course*</label>
+                    <input type="text" #course class="form-control">
+                </div>
+                </div>
+                <div class="card-footer">
+                    <button (click)="onStdAdd(studentName,email,phoneNumber,course)" *ngIf="!isinEditMode" class="btn btn-block bg-primary">Add student</button>
+                    <button (click)="onupdate()" *ngIf="isinEditMode" class="btn btn-block bg-primary">Update Student</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>SR.No</th>
+                    <th>Student NAME</th>
+                    <th>EMAIL</th>
+                    <th>NUMBER</th>
+                    <th>COURSE</th>
+                    <th><button class="btn btn-sm bg-primary">Edit</button></th>
+                    <th><button class="btn btn-sm bg-danger">Remove</button></th>
+
+
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let std of studentsarr; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{std.studentName}}</td>
+                        <td>{{std.email}}</td>
+                        <td>{{std.phoneNumber}}</td>
+                        <td>{{std.course}}</td>
+                        
+                           <td> <button type="button" (click)="onEdit(std)" class="btn btn-sm bg-primary">Edit</button></td>
+                         <td><button type="button" (click)="onRemove(std.id)" class="btn btn-sm bg-danger">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

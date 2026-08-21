@@ -1,0 +1,697 @@
+/* ========================================
+   VARIABLES
+======================================== */
+
+$bg-dark: #0d0906;
+$bg-light: #15100c;
+$card-bg: #1d140e;
+$coffee: #a87852;
+$coffee-light: #c3926b;
+$text-white: #ffffff;
+$text-light: #aaa09a;
+$text-muted: #746d68;
+$border: #3b281b;
+
+
+/* ========================================
+   GLOBAL
+======================================== */
+
+.coffee-page {
+  background: $bg-dark;
+  color: $text-white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.coffee-navbar {
+  background: $bg-dark;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+
+  .navbar-brand {
+    color: white;
+  }
+
+  .nav-link {
+    color: #ddd;
+    margin: 0 20px;
+    font-size: 18px;
+
+
+    &:hover {
+      color: $coffee-light;
+    }
+  }
+
+  .navbar-toggler {
+    border: 1px solid $coffee;
+    color: white;
+    padding: 5px 10px;
+  }
+}
+
+
+/* LOGO */
+
+.coffee-logo {
+  display: flex;
+  align-items: left;
+  gap: 10px;
+  text-decoration: none;
+
+  .logo-circle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $coffee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 35px;
+    font-style: italic;
+
+
+  }
+  span{
+    color:$coffee
+  }
+
+  small {
+    display: block;
+    color: $coffee-light;
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+}
+
+
+/* NAV ACTIONS */
+
+.navbar-actions {
+  display: flex;
+  gap: 10px;
+
+  .icon-btn {
+    background: transparent;
+    border: 0;
+    color: white;
+    font-size: 18px;
+  }
+.Search{
+    border-radius: 10px;
+    background-color:$coffee-light;
+
+}
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero-content {
+  min-height: 600px;
+  padding: 70px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $bg-dark;
+}
+
+.hero-small-title {
+  color: $coffee-light;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.hero-content h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 5vw, 70px);
+  line-height: .98;
+  font-weight: 500;
+  margin: 10px 0;
+
+  span {
+    color: $coffee-light;
+  }
+}
+
+.hero-description {
+  color: $text-light;
+  max-width: 450px;
+  line-height: 1.7;
+  font-size: 14px;
+  margin: 25px 0;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.coffee-btn {
+  background: $coffee;
+  color: white;
+  border: 1px solid $coffee;
+  padding: 12px 22px;
+
+  &:hover {
+    background: $coffee-light;
+  }
+
+  span {
+    margin-left: 15px;
+  }
+}
+
+.coffee-outline-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid #76543c;
+  padding: 12px 22px;
+
+  &:hover {
+    background: $card-bg;
+  }
+
+  span {
+    margin-left: 10px;
+  }
+}
+
+
+/* HERO FEATURES */
+
+.hero-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .feature-icon {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #654731;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $coffee-light;
+  }
+
+  strong {
+    display: block;
+    font-size: 11px;
+  }
+
+  small {
+    color: $text-muted;
+    font-size: 9px;
+  }
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+  height: 600px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.about-section {
+  background: $bg-light;
+}
+
+.about-image {
+  height: 480px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.about-content {
+  height: 100%;
+  min-height: 480px;
+  padding: 60px 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-label {
+  color: $coffee-light;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.about-content h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(35px, 4vw, 52px);
+  font-weight: 500;
+  line-height: 1.1;
+
+  span {
+    color: $coffee-light;
+  }
+}
+
+.about-description {
+  color: $text-light;
+  line-height: 1.8;
+  font-size: 13px;
+  max-width: 480px;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 25px;
+
+  li {
+    color: #ddd;
+    margin: 10px 0;
+    font-size: 13px;
+
+    span {
+      color: $coffee-light;
+      margin-right: 10px;
+    }
+  }
+}
+
+
+/* ========================================
+   PRODUCTS
+======================================== */
+
+.products-section {
+  padding: 80px 0;
+  background: $bg-dark;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+
+  p {
+    color: $coffee-light;
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.heading-line {
+  width: 70px;
+  height: 1px;
+  background: $coffee;
+  margin: 15px auto;
+}
+
+
+/* PRODUCT CARD */
+
+.product-card {
+  height: 100%;
+  background: $card-bg;
+  border: 1px solid $border;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: .3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: $coffee;
+  }
+}
+
+.product-image {
+  height: 220px;
+  padding: 10px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+.product-content {
+  padding: 12px 15px 18px;
+
+  h3 {
+    font-family: Georgia, serif;
+    font-size: 17px;
+  }
+
+  p {
+    color: $text-muted;
+    font-size: 11px;
+    line-height: 1.5;
+    min-height: 35px;
+  }
+}
+
+.product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+
+  strong {
+    font-size: 16px;
+  }
+}
+
+.cart-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid $coffee;
+  background: transparent;
+  color: $coffee-light;
+
+  &:hover {
+    background: $coffee;
+    color: white;
+  }
+}
+
+.view-menu-btn {
+  margin-top: 15px;
+  border: 1px solid #64462f;
+  color: white;
+  background: transparent;
+  padding: 12px 22px;
+
+  &:hover {
+    background: $card-bg;
+  }
+}
+
+
+/* ========================================
+   FEATURES
+======================================== */
+
+.features-section {
+  padding-bottom: 20px;
+}
+
+.features-box {
+  background: #1b110a;
+  border: 1px solid $border;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-right: 1px solid $border;
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #704e37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h5 {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  p {
+    margin: 5px 0 0;
+    color: $text-muted;
+    font-size: 9px;
+  }
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.coffee-footer {
+  background: #0a0705;
+  padding: 60px 0 20px;
+  margin-top: 30px;
+}
+
+.footer-about {
+
+  > p {
+    color: $text-muted;
+    font-size: 12px;
+    line-height: 1.7;
+    max-width: 280px;
+    margin-top: 20px;
+  }
+}
+
+.subscribe-box {
+  display: flex;
+  max-width: 300px;
+
+  input {
+    flex: 1;
+    background: #17100b;
+    border: 1px solid $border;
+    padding: 12px;
+    color: white;
+    outline: none;
+  }
+
+  button {
+    width: 45px;
+    border: none;
+    background: $coffee;
+    color: white;
+  }
+}
+
+.footer-column {
+
+  h5 {
+    color: white;
+    font-family: Georgia, serif;
+    margin-bottom: 20px;
+  }
+
+  a,
+  p {
+    display: block;
+    color: $text-muted;
+    font-size: 11px;
+    text-decoration: none;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  a:hover {
+    color: $coffee-light;
+  }
+}
+
+.copyright {
+  border-top: 1px solid #201711;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+
+  p {
+    color: #555;
+    font-size: 10px;
+  }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 991px) {
+
+  .hero-content {
+    min-height: 500px;
+    padding: 60px 8%;
+  }
+
+  .hero-image {
+    height: 500px;
+  }
+
+  .about-content {
+    padding: 50px 8%;
+  }
+
+  .service-item {
+    border-right: 0;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+
+  .coffee-navbar {
+    padding: 10px 0;
+  }
+
+  .navbar-actions {
+    margin-top: 10px;
+  }
+
+  .hero-content {
+    min-height: auto;
+    padding: 60px 7%;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;
+  }
+
+  .hero-image {
+    height: 350px;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+
+  .hero-feature {
+    margin-bottom: 15px;
+  }
+
+  .about-image {
+    height: 300px;
+  }
+
+  .about-content {
+    min-height: auto;
+    padding: 60px 7%;
+  }
+
+  .products-section {
+    padding: 60px 0;
+  }
+
+  .product-image {
+    height: 260px;
+  }
+
+  .features-box {
+    padding: 15px;
+  }
+
+  .service-item {
+    border-bottom: 1px solid $border;
+    padding: 15px 5px;
+  }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .hero-features {
+    .col-4 {
+      width: 100%;
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  }
+
+  .hero-image {
+    height: 280px;
+  }
+
+  .about-image {
+    height: 250px;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+  .product-image {
+    height: 250px;
+  }
+
+  .coffee-footer {
+    padding-top: 45px;
+  }
+
+}
