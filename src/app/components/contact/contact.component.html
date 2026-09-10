@@ -1,0 +1,144 @@
+<div class="feedback-page">
+
+  <!-- ========================= -->
+  <!-- FEEDBACK FORM -->
+  <!-- ========================= -->
+
+  <div class="feedback-form">
+
+    <mat-card>
+
+      <mat-card-title>
+        Customer Feedback
+      </mat-card-title>
+
+
+      <!-- NAME -->
+
+      <mat-form-field appearance="outline" class="full-width">
+
+        <mat-label>Your Name</mat-label>
+
+        <input
+          matInput
+          type="text"
+          placeholder="Enter your name"
+          [(ngModel)]="name">
+
+      </mat-form-field>
+
+
+      <!-- FEEDBACK -->
+
+      <mat-form-field appearance="outline" class="full-width">
+
+        <mat-label>Feedback</mat-label>
+
+        <textarea
+          matInput
+          rows="5"
+          placeholder="Enter your feedback"
+          [(ngModel)]="comment">
+        </textarea>
+
+      </mat-form-field>
+
+
+      <!-- RATING -->
+
+      <div class="rating-section">
+
+        <h5>Rate our coffee</h5>
+
+        <div class="stars">
+
+          <mat-icon
+            *ngFor="let star of [1,2,3,4,5]"
+            (click)="selectRating(star)"
+            [class.active]="star <= rating">
+
+            {{ star <= rating ? 'star' : 'star_border' }}
+
+          </mat-icon>
+
+        </div>
+
+
+        <p *ngIf="rating > 0">
+          You selected {{ rating }} / 5
+        </p>
+
+      </div>
+
+
+      <!-- SUBMIT -->
+
+      <button
+        mat-raised-button
+        color="primary"
+        class="submit-btn"
+        (click)="submitFeedback()">
+
+        Submit
+
+      </button>
+
+    </mat-card>
+
+  </div>
+
+
+
+  <!-- ========================= -->
+  <!-- CUSTOMER REVIEWS -->
+  <!-- ========================= -->
+
+  <div class="reviews">
+
+    <!-- When there is no feedback -->
+
+    <div *ngIf="feedbackList.length === 0"
+         class="no-review">
+
+      No reviews yet!!!
+
+    </div>
+
+
+    <!-- Display feedback -->
+
+    <mat-card
+      class="review-card"
+      *ngFor="let feedback of feedbackList">
+
+      <h3>
+        {{ feedback.name }}
+      </h3>
+
+
+
+
+
+      <!-- Comment -->
+
+      <p>
+        {{ feedback.comment }}
+      </p>
+       
+        <!-- Display stars -->
+
+      <div class="display-stars">
+
+        <mat-icon
+          *ngFor="let star of [1,2,3,4,5]">
+
+          {{ star <= feedback.rating ? 'star' : 'star_border' }}
+
+        </mat-icon>
+
+      </div>
+    </mat-card>
+
+  </div>
+
+</div>

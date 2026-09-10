@@ -1,0 +1,69 @@
+
+<div class="coffee-page">
+ <div
+  class="no-result"
+  *ngIf="products.length === 0 && searchText.trim()"
+>
+  <h4>No coffee found ☕</h4>
+
+  <p>
+     "{{ searchText }}"
+  </p>
+
+</div>
+
+      <div class="row mt-4">
+        <div
+          class="col-12 col-sm-6 col-lg-3 mb-4"
+          *ngFor="let menu of products">
+
+          <div class="menu-card" (click)="gotoAbout()">
+            <button type="button" class="x-btn" 
+            (click)="deleteCard(menu.id)">
+              ✖
+            </button>
+
+            <div class="menu-image">
+
+              <img
+                [src]="menu.image"
+                [alt]="menu.name">
+
+            </div>
+
+
+            <div class="menu-content">
+
+              <h3>
+                {{ menu.name }}
+              </h3>
+
+              <p>
+                {{ menu.description }}
+              </p>
+
+
+              <div class="menu-bottom">
+
+                <strong>
+                  ₹{{ menu.price }}
+                </strong>
+
+                <button type="button"
+                  class="cart-btn" (click)="addToCart(menu)">
+
+                  🛒
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+     
+</div>

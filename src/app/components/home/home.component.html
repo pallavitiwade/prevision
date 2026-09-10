@@ -3,11 +3,10 @@
 
   <!-- ================= NAVBAR ================= -->
 
-  <nav id="navbarS" class="navbar navbar-expand-lg coffee-navbar">
+   <!-- <nav id="navbarS" class="navbar navbar-expand-lg coffee-navbar"> 
 
     <div class="container">
 
-      <!-- Logo -->
 
       <a class="navbar-brand coffee-logo" routerLink="/home">
 
@@ -22,7 +21,6 @@
       </a>
 
 
-      <!-- Mobile Menu Button -->
 
       <button
         class="navbar-toggler"
@@ -37,7 +35,6 @@
       </button>
 
 
-      <!-- Navigation -->
 
       <div
         class="collapse navbar-collapse"
@@ -47,7 +44,7 @@
 
           <li class="nav-item">
             <a
-              class="nav-link" href="#home"
+              class="nav-link"
               routerLink="/home">
               Home
             </a>
@@ -55,24 +52,24 @@
 
           <li class="nav-item">
             <a
-              class="nav-link" href="#about"
-              routerLink="/about">
+              class="nav-link"
+              routerLink="/About">
               About
             </a>
           </li>
 
           <li class="nav-item">
             <a
-              class="nav-link" href="#menu"
-              routerLink="/menu">
+              class="nav-link"
+              routerLink="/Menu">
               Menu
             </a>
           </li>
 
           <li class="nav-item">
             <a
-              class="nav-link" href="#contact"
-              routerLink="/contact">
+              class="nav-link"
+              routerLink="/Contact">
               Contact
             </a>
           </li>
@@ -80,7 +77,6 @@
         </ul>
 
 
-        <!-- Search + Cart -->
 
         <div class="navbar-actions">
 
@@ -100,7 +96,7 @@
 
     </div>
 
-  </nav>
+  </nav> -->
 
 
   <!-- ================= HERO ================= -->
@@ -196,8 +192,8 @@
 
                 <div class="hero-feature">
 
-                  <div class="feature-icon">
-                    ♥️
+                  <div class="feature-icon" (click)="increaseCount()">
+                    ♥️{{count}}
                   </div>
 
                   <div>
@@ -309,7 +305,7 @@
             </ul>
 
 
-            <button class="btn coffee-btn">
+            <button class="btn coffee-btn" routerLink="/About">
               Learn More
               <span>→</span>
             </button>
@@ -352,9 +348,9 @@
 
         <div
           class="col-12 col-sm-6 col-lg-3 mb-4"
-          *ngFor="let product of products">
+          *ngFor="let product of MenuArr">
 
-          <div class="product-card">
+          <div class="product-card" routerLink="/Menu">
 
             <div class="product-image">
 
@@ -402,7 +398,7 @@
 
       <div class="text-center">
 
-        <button class="btn view-menu-btn">
+        <button class="btn view-menu-btn" routerLink="/Menu">
           View Full Menu
           <span>→</span>
         </button>
@@ -422,7 +418,7 @@
 
       <div class="features-box">
 
-        <div class="row">
+        <div class="row" routerLink="/Contact">
 
           <div class="col-12 col-md-6 col-lg-3">
 
@@ -544,7 +540,7 @@
                 type="email"
                 placeholder="Enter your email">
 
-              <button>
+              <button routerLink="/Feedback">
                 →
               </button>
 
@@ -636,3 +632,4 @@
   </footer>
 </div>
 </div>
+

@@ -1,0 +1,44 @@
+
+$bg-dark: #0d0906;
+$bg-light: #15100c;
+$card-bg: #1d140e;
+$coffee: #a87852;
+$coffee-light: #c3926b;
+$text-white: #ffffff;
+$text-light: #aaa09a;
+$text-muted: #746d68;
+$border: #3b281b;
+
+.coffee-page{
+      background:url(https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmVlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D);
+  color: $text-white;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+   background-attachment: fixed;
+  background-size: cover;
+    overflow-x: hidden;
+
+
+  
+}
+.card{
+    background: $border;
+    border-radius: 15px;
+    opacity: 0.8;
+}
+
+.form-control{
+    color: $coffee;
+}
+
+button{
+    background: $coffee;
+    color:white;
+}
+
+h2{
+        font-family: Georgia, serif;
+    font-style: italic;
+
+}

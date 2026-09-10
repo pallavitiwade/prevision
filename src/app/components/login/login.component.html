@@ -1,0 +1,71 @@
+<div class="coffee-page">
+<div class="container mt-5">
+
+  <div class="row justify-content-center">
+
+    <div class="col-md-5">
+
+      <div class="card p-4 mt-5 shadow">
+
+        <h2 class="text-center mb-2">
+          ☕ Star coffee
+        </h2>
+
+        <h4 class="text-center">
+          Login
+        </h4>
+
+        <form (ngSubmit)="login()">
+
+          <div class="mb-3">
+
+            <label>Email</label>
+
+            <input
+              type="email"
+              class="form-control"
+              [(ngModel)]="email"
+              name="email"
+              required
+            >
+
+          </div>
+
+          <div class="mb-4">
+
+            <label>Password</label>
+
+            <input
+              type="password"
+              class="form-control"
+              [(ngModel)]="password"
+              name="password"
+              required
+            >
+
+          </div>
+
+          <button
+            type="submit"
+            class="btn w-100 mb-4">
+
+            Login
+
+          </button>
+
+        </form>
+
+        <div *ngIf="errorMessage">
+          <p class="text-danger mt-3">
+            {{ errorMessage }}
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+</div>

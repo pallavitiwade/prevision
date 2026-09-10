@@ -1,0 +1,59 @@
+<!-- ================= NAVBAR ================= -->
+
+<nav id="navbarS" class="navbar navbar-expand-lg coffee-navbar">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand coffee-logo" routerLink="/home">
+      <span class="logo-circle">
+        ☕
+      </span>
+      <h3>Star <span>Coffee</span></h3>
+    </a>
+    <!-- Mobile Menu Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#coffeeNavbarBar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        ☰
+      </span>
+    </button>
+    <!-- Navigation -->
+    <div class="collapse navbar-collapse" id="coffeeNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/About">
+            About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Menu">
+            Menu
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Feedback">
+            Feedback
+          </a>
+        </li>
+      </ul>
+      <!-- Search + Cart -->
+      <div class="navbar-actions mr-4">
+        <!-- <button class="icon-btn">
+            </button> -->
+        <input type="text" placeholder="Search coffee here" class="Search" [(ngModel)]="searchValue"
+          (input)="SearchCoffee()">
+
+        <button class="icon-btn cart" routerLink="/Cart">
+          🛒<span>{{Count}}</span>
+        </button>
+      </div>
+      <button class="btn" (click)="logout()">
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

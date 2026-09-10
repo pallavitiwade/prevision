@@ -1,0 +1,73 @@
+
+
+<div class="coffee-page">
+<div class="row mt-4">
+        <div
+          class="col-sm-4 mb-4"
+          *ngFor="let menu of products">
+
+          <div class="menu-card">
+            <button type="button" class="x-btn"
+             (click)="deleteCard(menu.id)">
+              ✖
+            </button>
+
+            <div class="menu-image">
+
+              <img
+                [src]="menu.image"
+                [alt]="menu.name">
+
+            </div>
+
+
+            <div class="menu-content">
+
+              <h3>
+                {{ menu.name }}
+              </h3>
+
+              <p>
+                {{ menu.description }}
+              </p>
+
+
+              <div class="menu-bottom">
+
+                <strong>
+                  ₹{{ menu.price }}
+                </strong>
+
+                <button type="button"
+                  class="cart-btn">
+
+                  🛒
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-lg-6">
+          
+        <div class="calculate">
+          
+        </div>
+
+        </div>
+
+      </div>
+      </div>
+
+
+     
+
+
+
+
+
+   

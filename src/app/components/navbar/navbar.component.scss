@@ -1,0 +1,173 @@
+
+
+$bg-dark: #0d0906;
+$bg-light: #15100c;
+$card-bg: #1d140e;
+$coffee: #a87852;
+$coffee-light: #c3926b;
+$text-white: #ffffff;
+$text-light: #aaa09a;
+$text-muted: #746d68;
+$border: #3b281b;
+
+
+.coffee-page {
+  background: $bg-dark;
+  color: $text-white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.coffee-navbar {
+  background: $bg-dark;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+
+  .navbar-brand {
+    color: white;
+  }
+
+  .nav-link {
+    color: #ddd;
+    margin: 0 20px;
+    font-size: 18px;
+
+
+    &:hover {
+      color: $coffee-light;
+    }
+  }
+
+  .navbar-toggler {
+    border: 1px solid $coffee;
+    color: white;
+    padding: 5px 10px;
+  }
+}
+
+
+/* LOGO */
+
+.coffee-logo {
+  display: flex;
+  align-items: left;
+  gap: 10px;
+  text-decoration: none;
+
+  .logo-circle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $coffee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h3 {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 35px;
+    font-style: italic;
+
+
+  }
+  span{
+    color:$coffee
+  }
+
+  small {
+    display: block;
+    color: $coffee-light;
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+}
+
+
+/* NAV ACTIONS */
+
+.navbar-actions {
+  display: flex;
+  gap: 10px;
+
+  .icon-btn {
+    background: transparent;
+    border: 0;
+    color: white;
+    font-size: 18px;
+  }
+.Search{
+    border-radius: 10px;
+    background-color:$coffee-light;
+
+}
+
+// .icon-btn{
+//   background-color: black;
+//   color:white;
+//   border-radius: 50%;
+//   font-size: 20px;
+
+// }
+//  .cart{
+//     width: 40px;
+//   height: 39px;
+//   border-radius: 50%;
+//   border: 1px solid $coffee;
+//   background: transparent;
+//   color: $coffee-light;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   font-weight: bold; 
+//  }
+
+.cart {
+  position: relative;
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid $coffee;
+  background: transparent;
+  color: $coffee-light;
+}
+
+.cart span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background:$coffee;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+
+
+}
+
+.btn{
+  background:$coffee;
+  color:$text-white;
+
+}
